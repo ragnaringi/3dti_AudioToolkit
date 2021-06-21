@@ -120,7 +120,7 @@ namespace Binaural {
 		*	\param [out] output output buffer with the processed reverb
 		*   \eh Nothing is reported to the error handler.
 		*/
-		void ProcessEncodedChannelReverb(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output);
+		void ProcessEncodedChannelReverb(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output);
 
 		/** \brief Configures the number of channels of the first-order ambisonic reverb processing
 		*	\details The options are: W, X, Y and Z (3D); W, X and Y (2D); only W (0D)
@@ -143,9 +143,9 @@ namespace Binaural {
 		void ProcessVirtualAmbisonicReverbThreedimensional(CMonoBuffer<float> & outBufferLeft, CMonoBuffer<float> & outBufferRight);
 
 		//Processes a reverb encoded channel in each reverberation order configuration. TODO: make unique function
-		void ProcessEncodedChannelReverbThreedimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output);
-		void ProcessEncodedChannelReverbBidimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output);
-		void ProcessEncodedChannelReverbAdimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output);
+		void ProcessEncodedChannelReverbThreedimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output);
+		void ProcessEncodedChannelReverbBidimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output);
+		void ProcessEncodedChannelReverbAdimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output);
 
 		//Calculates partitioned ABIR in each reverberation order configuration
 		bool CalculateABIRPartitionedAdimensional();

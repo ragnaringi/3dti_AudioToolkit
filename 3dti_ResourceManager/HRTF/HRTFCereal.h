@@ -25,7 +25,7 @@
 
 #ifndef PLATFORM_DEFINED
 	#if defined (__ANDROID_API__)
-		#include <to_string.hpp>
+		// #include <to_string.hpp>
 		#if !defined(UNITY_ANDROID)
 			#define PLATFORM_ANDROID		
 		#endif
@@ -98,7 +98,7 @@ namespace HRTF {
 
 #if defined(PLATFORM_ANDROID)
 	//Binaural::CHRTF CreateFrom3dtiWithAndroidActivity(const std::string input3dti, ANativeActivity* activity, int bufferSize, int sampleRate);	///< Create head from 3dti file in Android platform	
-	void CreateFrom3dtiWithAndroidActivity(const std::string input3dti, ANativeActivity* activity, shared_ptr<Binaural::CListener> listener);	///< Load HRTF head from 3dti file in Android platform	
+//	void CreateFrom3dtiWithAndroidActivity(const std::string input3dti, ANativeActivity* activity, shared_ptr<Binaural::CListener> listener);	///< Load HRTF head from 3dti file in Android platform
 #endif	
 }
 

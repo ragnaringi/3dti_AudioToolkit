@@ -1265,7 +1265,7 @@ namespace Binaural {
 	}
 //////////////////////////////////////////////
 
-	void CEnvironment::ProcessEncodedChannelReverbThreedimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output)
+	void CEnvironment::ProcessEncodedChannelReverbThreedimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output)
 	{
 		CMonoBuffer<float> channel_FFT;
 		CMonoBuffer<float> Convolution_left_FFT;
@@ -1313,7 +1313,7 @@ namespace Binaural {
 #endif
 	}
 
-	void CEnvironment::ProcessEncodedChannelReverbBidimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output)
+	void CEnvironment::ProcessEncodedChannelReverbBidimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output)
 	{
 		CMonoBuffer<float> channel_FFT;
 		CMonoBuffer<float> Convolution_left_FFT;
@@ -1357,7 +1357,7 @@ namespace Binaural {
 #endif
 	}
 
-	void CEnvironment::ProcessEncodedChannelReverbAdimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output)
+	void CEnvironment::ProcessEncodedChannelReverbAdimensional(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output)
 	{
 		CMonoBuffer<float> channel_FFT;
 		CMonoBuffer<float> Convolution_left_FFT;
@@ -1379,7 +1379,7 @@ namespace Binaural {
 	}
 
 	// Process reverb for one b-format channel encoded with 1st order ambisonics (useful for some wrappers)
-	void CEnvironment::ProcessEncodedChannelReverb(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CMonoBuffer<float> & output)
+	void CEnvironment::ProcessEncodedChannelReverb(TBFormatChannel channel, CMonoBuffer<float> encoderIn, CStereoBuffer<float> & output)
 	{	
 
 		// error handler: Trust in called methods for setting result

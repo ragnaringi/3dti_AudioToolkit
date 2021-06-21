@@ -73,7 +73,7 @@ namespace HRTF
 	}
 
 //////////////////////////////////////////////////////
-
+/*
 #if defined (PLATFORM_ANDROID)
 		void CreateFrom3dtiWithAndroidActivity(const std::string input3dti, ANativeActivity* activity, shared_ptr<Binaural::CListener> listener)
 	{
@@ -112,7 +112,7 @@ namespace HRTF
 		// Now, read HRTF from that file		
 		CreateFrom3dti(fileWithPath, listener);
 #endif
-
+*/
 //////////////////////////////////////////////////////
 	
 	bool CreateFrom3dti(const std::string & input3dti, shared_ptr<Binaural::CListener> listener)
@@ -127,7 +127,7 @@ namespace HRTF
 		else
 		{
 #if defined (PLATFORM_ANDROID)
-			DEBUG_ANDROID("Could not open input file: %s", input3dti.c_str());
+//			DEBUG_ANDROID("Could not open input file: %s", input3dti.c_str());
 #endif	
 			SET_RESULT(RESULT_ERROR_FILE, "Could not open 3DTI-HRTF file");
 			return false;
@@ -171,7 +171,7 @@ namespace HRTF
 		else
 		{
 #if defined (PLATFORM_ANDROID)
-			DEBUG_ANDROID("Could not open input file: %s", input3dti.c_str());
+//			DEBUG_ANDROID("Could not open input file: %s", input3dti.c_str());
 #endif	
 			SET_RESULT(RESULT_ERROR_FILE, "Could not open 3DTI-HRTF file");
 			return false;
